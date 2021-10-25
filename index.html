@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+    <script defer="defer" src="js/p1.1f801a43ba3a89ae4bab.js"></script>
+  </head>
+  <body id="body">
+    <header class="header">
+      <div class="player" id="player">
+        <div class="player-controls">
+          <button class="play-prev player-icon" id="play-prev"></button>
+          <button class="play player-icon" id="play"></button>
+          <button class="play-next player-icon" id="play-next"></button>
+        </div>
+        <div class="progress">
+          <div class="track-title" id="track-title"></div>
+          <input
+            type="range"
+            class="progress-bar"
+            id="progress-bar"
+            min="0"
+            max="100"
+          />
+          <div class="audio-time">
+            <div class="current"></div>
+            <div class="divider"></div>
+            <div class="length"></div>
+          </div>
+        </div>
+        <button class="volume" id="volume-button"></button>
+        <div class="volume-progress">
+          <input
+            type="range"
+            class="volume-bar"
+            id="volume-bar"
+            min="0"
+            max="100"
+          />
+        </div>
+        <ul class="play-list" id="play-list"></ul>
+      </div>
+      <div class="weather" id="weather">
+        <input class="city" id="city" />
+        <i class="weather-icon owf" id="weather-icon"></i>
+        <div class="weather-error" id="weather-error"></div>
+        <div class="description-container" id="description-container">
+          <span class="temperature" id="temp"></span>
+          <span class="weather-description" id="weather-description"></span>
+        </div>
+        <div class="wind" id="wind"></div>
+        <div class="humidity" id="humidity"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon" id="slide-prev"></button>
+        <button class="slide-next slider-icon" id="slide-next"></button>
+      </div>
+      <time class="time" id="time"></time><date class="date" id="date"></date>
+      <div class="greeting-container" id="greeting">
+        <span class="greeting" id="greeting_span"></span>
+        <input class="name" id="name" placeholder="[Enter name]" />
+      </div>
+    </main>
+    <footer class="footer">
+      <div id="quote-container">
+        <button class="change-quote" id="change-quote"></button>
+        <div class="quote" id="quote"></div>
+        <div class="author" id="author"></div>
+      </div>
+      <button class="settings" id="settings"></button>
+      <div id="myModal" class="modal">
+        <div class="modal-content" id="modal-content">
+          <span class="close">&times;</span>
+          <h3 class="modal-title" id="modal-title"></h3>
+          <div class="language">
+            <h5 class="setting-lang" id="settings-lang"></h5>
+            <div class="switcher-language" id="switcher-language">
+              <h6 id="switcher_eng">EN</h6>
+              <label class="switch"
+                ><input
+                  type="checkbox"
+                  id="switch-language"
+                  class="switch-language" />
+                <span class="slider round"></span
+              ></label>
+              <h6 id="switcher_ru">RU</h6>
+            </div>
+          </div>
+          <div class="images-source">
+            <h5 class="images-source-title" id="images_source"></h5>
+            <form id="source">
+              <input type="radio" id="github" name="source" />
+              <label for="github">Github</label>
+              <input type="radio" id="flickr" name="source" />
+              <label for="flickr">FlickrAPI</label>
+              <input type="radio" id="unsplash" name="source" />
+              <label for="unsplash">UnsplashAPI</label>
+              <input id="tags" placeholder="Enter tags, separator is ',' " />
+            </form>
+          </div>
+          <div class="displayed-blocks" id="displayed-blocks">
+            <h5 class="block-title" id="block-title">Display:</h5>
+            <input type="checkbox" id="time_checkbox" />
+            <label for="time_checkbox">Time</label>
+            <input type="checkbox" id="date_checkbox" />
+            <label for="date_checkbox">Date</label>
+            <input type="checkbox" id="greeting_checkbox" />
+            <label for="greeting_checkbox">Greeting</label>
+            <input type="checkbox" id="quote-container_checkbox" />
+            <label for="quote_checkbox">Quote</label>
+            <input type="checkbox" id="weather_checkbox" />
+            <label for="weather_checkbox">Weather</label>
+            <input type="checkbox" id="player_checkbox" />
+            <label for="player_checkbox">Player</label>
+            <input type="checkbox" id="name_checkbox" />
+            <label for="player_checkbox">Name</label>
+          </div>
+          <button class="modal-button-save" id="modal-button-save">Save</button>
+          <button class="modal-button-exit" id="modal-button-exit">Exit</button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
